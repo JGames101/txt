@@ -107,7 +107,7 @@ function getAllUrlParams(url) {
   return obj;
 }
 var version = getAllUrlParams().version;
-jQuery.get('https://jgames101.github.io/updates/info/logs/' + version + '.txt', function(data) {
+jQuery.get(version, function(data) {
     document.getElementById('text').innerHTML = data;
 	document.title = version;
 });
