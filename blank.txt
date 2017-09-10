@@ -1,0 +1,2 @@
+<h2>Welcome!</h2><br>
+Hi! Please enter ?document= and then a URL to a text document to view it.
