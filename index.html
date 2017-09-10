@@ -107,6 +107,9 @@ function getAllUrlParams(url) {
   return obj;
 }
 var version = getAllUrlParams().document;
+if (version = undefined) {
+	var version = 'https://jgames101.github.io/txt/blank.txt';
+};
 jQuery.get(version, function(data) {
     document.getElementById('text').innerHTML = data;
 	document.title = version;
