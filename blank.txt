@@ -1,8 +1,3 @@
 <h2>Welcome!</h2><br>
 Hi! Enter the URL of a text document below to open it in James M's document viewer.<br>
 <input type="url" id="fileUrl"><button onclick="javascript:openFile()">Go...</button>
-<script>
-function openFile() {
-  window.location.href = "https://jgames101.github.io/txt/?document=" + document.getElementById("fileUrl").value;
-}
-</script>
