@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <head>
-<script src="/jquery-3.2.1.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>loading...</title>
 <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,200" rel="stylesheet">
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link href="/styles.css" rel="stylesheet" type="text/css">
 <style>
 #page {
 	background-color: white;
@@ -37,10 +37,14 @@ body {
 </style>
 </head>
 <body>
+<div id="menu">
+</div>
+<div id="colourBackground">
 <div id="page">
 <br>
 <p id="text"></p>
 <br>
+</div>
 </div>
 </body>
 <script>
@@ -114,10 +118,12 @@ jQuery.get(version, function(data) {
     document.getElementById('text').innerHTML = data;
 	document.title = version;
 });
-document.body.style.backgroundColor = localStorage.getItem("themeColour");
 </script>
 <script> // open file function for homepage
 function openFile() {
   window.location.href = "https://jgames101.github.io/txt/?document=" + document.getElementById("fileUrl").value;
 }
 </script>
+<script src="/modernizr-webp.js"></script>
+<script src="/jquery-3.2.1.min.js"></script>
+<script src="/global.js"></script>
