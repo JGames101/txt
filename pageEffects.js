@@ -3,7 +3,7 @@ jQuery.get('/menus/' + localStorage.getItem('navbar') + '.html', function(data) 
 	if (localStorage.getItem('navbar') == 'mobile') {
 		mobileIndicator();
 	};
-	document.getElementById('menuTitle').innerHTML = ' ';
+	document.getElementById('menuTitle').innerHTML = 'loading...';
 	loadTheme();
 	window.addEventListener('scroll', function(e) {
 		if(window.scrollY>100) {
