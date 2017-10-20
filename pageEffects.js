@@ -13,7 +13,6 @@ jQuery.get('/menus/' + localStorage.getItem('navbar') + '.html', function(data) 
 		}
 	});
 	$( document ).ready(function() {
-		loadPageContent();
 		loadTheme();
 	});
 });
@@ -347,18 +346,3 @@ function mobileIndicator() {
 	};
 };
 
-function loadPageContent() {
-	if (navigator.onLine) {
-		jQuery.get('/page/' + document.title + '.html', function(data) {
-			document.getElementsByClassName('content')[0].innerHTML = data;
-			$(".pinned").css("color", localStorage.getItem("themeColour"));
-			$.getScript( '/page/' + document.title + '.js' );
-			calculateCardColumns();
-			$(".pinned").css("color", localStorage.getItem("themeColour"));
-		});
-	} else {
-		jQuery.get('/page/offline.html', function(data) {
-			document.getElementsByClassName('content')[0].innerHTML = data;
-		});
-	}
-};
