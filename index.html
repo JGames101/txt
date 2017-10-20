@@ -121,8 +121,8 @@ jQuery.get(version, function(data) {
     document.getElementById('text').innerHTML = data;
 	document.title = version;
 });
-</script>
-<script> // open file function for homepage
+document.getElementById('menuTitle').innerHTML = document.title;
+
 function openFile() {
   window.location.href = "https://jgames101.github.io/txt/?document=" + document.getElementById("fileUrl").value;
 }
