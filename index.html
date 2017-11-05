@@ -5,6 +5,7 @@
 <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,200" rel="stylesheet">
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <link href="/styles.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
 <style>
 body {
 	background-color: #111 !important;
@@ -57,7 +58,7 @@ header {
 </body>
 <script src="/modernizr-webp.js"></script>
 <script src="/jquery-3.2.1.min.js"></script>
-<script src="/txt/pageEffects.js"></script>
+<script src="/global.js"></script>
 <script>
 
 function getAllUrlParams(url) {
@@ -135,3 +136,5 @@ function openFile() {
   window.location.href = "https://jgames101.github.io/txt/?document=" + document.getElementById("fileUrl").value;
 }
 </script>
+<script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+<script>mdc.autoInit()</script>
